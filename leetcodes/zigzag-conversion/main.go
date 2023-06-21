@@ -15,6 +15,8 @@ import (
 //之后，你的输出需要从左往右逐行读取，产生出一个新的字符串，比如："PAHNAPLSIIGYIR"。
 //请你实现这个将字符串进行指定行数变换的函数：
 //string convert(string s, int numRows);
+// 来源：力扣（LeetCode）
+// 链接：https://leetcode.cn/problems/zigzag-conversion
 
 func convert(s string, numRows int) string {
 	var res [][]string
