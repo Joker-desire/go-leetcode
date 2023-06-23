@@ -1,12 +1,16 @@
-package main
+/**
+ * @Author: yy
+ * @Description:
+ * @File:  leetcode
+ * @Version: 1.0.0
+ * @Date: 2023/06/21 22:33
+ */
 
-import (
-	"fmt"
-	"strings"
-)
+package leetcode
 
-// 时间：2023年06月21日22:33:23
-// 6. N字形变换
+import "strings"
+
+// Convert 6. N字形变换
 //将一个给定字符串 s 根据给定的行数 numRows ，以从上往下、从左到右进行 Z 字形排列。
 //比如输入字符串为 "PAYPALISHIRING" 行数为 3 时，排列如下：
 //P   A   H   N
@@ -17,8 +21,7 @@ import (
 //string convert(string s, int numRows);
 // 来源：力扣（LeetCode）
 // 链接：https://leetcode.cn/problems/zigzag-conversion
-
-func convert(s string, numRows int) string {
+func Convert(s string, numRows int) string {
 	var res [][]string
 	// 通过传入的行数构建多维数组
 	for i := 0; i < numRows; i++ {
@@ -70,13 +73,4 @@ func convert(s string, numRows int) string {
 		resStr += strings.Join(val, "")
 	}
 	return resStr
-}
-
-func main() {
-	cases := [][]any{{"PAYPALISHIRING", 3, "PAHNAPLSIIGYIR"}, {"PAYPALISHIRING", 4, "PINALSIGYAHRPI"}, {"A", 1, "A"}}
-	for _, val := range cases {
-		s2 := convert(val[0].(string), val[1].(int))
-		fmt.Println(s2 == val[2].(string))
-	}
-
 }
