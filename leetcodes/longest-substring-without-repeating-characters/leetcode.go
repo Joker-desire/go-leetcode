@@ -1,14 +1,18 @@
-package main
+/**
+ * @Author: yy
+ * @Description:
+ * @File:  leetcode
+ * @Version: 1.0.0
+ * @Date: 2023/06/20 15:09
+ */
 
-import "fmt"
+package leetcode
 
-// 时间：2023年06月20日15:09:32
-// 3. 无重复字符的最长子串
+// LengthOfLongestSubstring 3. 无重复字符的最长子串
 // 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
 // 来源：力扣（LeetCode）
 // 链接：https://leetcode.cn/problems/longest-substring-without-repeating-characters
-
-func lengthOfLongestSubstring(s string) int {
+func LengthOfLongestSubstring(s string) int {
 	// 如果字符串为空则直接返回结果0
 	if s == "" {
 		return 0
@@ -55,13 +59,4 @@ func lengthOfLongestSubstring(s string) int {
 		movIndex++
 	}
 	return count
-}
-func main() {
-	cases := []string{
-		"abcabcbb", "bbbbb", "pwwkew", " ", "au", "", "aabaab!bb",
-	}
-	for _, s := range cases {
-		length := lengthOfLongestSubstring(s)
-		fmt.Printf("%s 无重复字符的最长子串: %d\n", s, length)
-	}
 }
