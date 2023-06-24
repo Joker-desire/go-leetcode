@@ -1,19 +1,22 @@
-package main
+/**
+ * @Author: yy
+ * @Description:
+ * @File:  leetcode
+ * @Version: 1.0.0
+ * @Date: 2023/06/22 10:02
+ */
 
-import (
-	"fmt"
-	"strconv"
-)
+package leetcode
 
-// 时间：2023年06月22日10:02:30
-// 9. 回文数
+import "strconv"
+
+// IsPalindrome 9. 回文数
 // 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。
 // 回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
 // 例如，121 是回文，而 123 不是。
 // 来源：力扣（LeetCode）
 // 链接：https://leetcode.cn/problems/palindrome-number
-
-func isPalindrome(x int) bool {
+func IsPalindrome(x int) bool {
 	// 将int类型转成字符串
 	s := strconv.Itoa(x)
 	// 字符串长度
@@ -28,12 +31,4 @@ func isPalindrome(x int) bool {
 		}
 	}
 	return true
-}
-
-func main() {
-	cases := []int{121, -121, 10}
-	for _, x := range cases {
-		fmt.Printf("%d 是否为回文数字：%v\n", x, isPalindrome(x))
-	}
-
 }
