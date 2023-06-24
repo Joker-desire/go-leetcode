@@ -1,15 +1,19 @@
-package main
+/**
+ * @Author: yy
+ * @Description:
+ * @File:  leetcode
+ * @Version: 1.0.0
+ * @Date: 2023/06/22 08:52
+ */
 
-import "fmt"
+package leetcode
 
-// 时间：2023年06月22日08:52:35
-// 5. 最长回文子串
+// LongestPalindrome 5. 最长回文子串
 //给你一个字符串 s，找到 s 中最长的回文子串。
 //如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。
 // 来源：力扣（LeetCode）
 // 链接：https://leetcode.cn/problems/longest-palindromic-substring
-
-func longestPalindrome(s string) string {
+func LongestPalindrome(s string) string {
 	// 是否是回文字符串判断函数
 	var isPalindrome = func(s string) bool {
 		// 字符串长度
@@ -57,12 +61,4 @@ func longestPalindrome(s string) string {
 	}
 	// 返回最大长度的值
 	return maxStr
-}
-
-func main() {
-	cases := []string{"babad", "cbbd", "a"}
-	for _, val := range cases {
-		palindrome := longestPalindrome(val)
-		fmt.Printf("%s 的最长回文子串为：%s\n", val, palindrome)
-	}
 }
