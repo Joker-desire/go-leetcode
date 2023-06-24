@@ -25,3 +25,11 @@ git commit -m "Go LeetCode项 目 初 始 化 "
 ```shell
 git push -u origin master
 ```
+
+## 回退某次本地提交（commit）
+
+```shell
+git reset --soft HEAD^
+# HEAD^：表示上一个版本，也可以写成HEAD~1
+# HEAD^^：表示上上一个版本，也可以写成HEAD~2
+```
